@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22",
+  "clue": "Donation boxes are said to be a scam",
+  "answer": "GRIFT",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Rusty Lee",
+  "definition": [
+    "a scam"
+  ],
+  "indicators": [
+    "boxes",
+    "said"
+  ],
+  "fodder": [
+    "Donation",
+    "are"
+  ],
+  "clueTypes": [
+    "homophone",
+    "container"
+  ],
+  "video": "https://youtu.be/MGnSeeV93c8",
+  "solveCount": 36316,
+  "fetchedAt": "2026-10-22T09:20:56.435Z"
+}
