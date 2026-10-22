@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import { CLUE_TYPES } from '../lib/puzzles.js';
+
+const examples: Record<string, string> = {
+  hidden: 'Words like "in", "within", "some", "part of" or "hiding".',
+  anagram: 'Words that suggest change or disorder, like "mixed", "broken", "wild", "recklessly" or "new".',
+  homophone: 'Words about hearing or speaking, like "said", "heard", "on the radio" or "we hear".',
+  container: 'Words like "holding", "around", "boxes", "inside", "about" or "eating".',
+  reversal: 'Words like "back", "returned", "up" (in a down clue) or "retiring".',
+  deletion: 'Words like "without", "losing", "headless", "endless" or "dropping".',
+  initials: 'Words like "first of", "starts", "leaders" or "heads".',
+  finals: 'Words like "last of", "ends", "finally" or "tails".',
+  alternate: 'Words like "regularly", "oddly", "evenly" or "every other".',
+  selection: 'Words like "partly", "half", "a bit of" or "some of".',
+  charade: 'Often no indicator at all, or linking words like "with", "and", "after" or "next to".',
+  double: 'No indicator. The clue is simply two definitions side by side.',
+};
+
+const faq = [
+  {
+    q: 'How long should a Minute Cryptic take?',
+    a: 'The puzzle is built to be solved in about a minute, but most people take longer while they learn the clue types. Using a hint or two is normal.',
+  },
+  {
+    q: 'Is the definition always at the start or end?',
+    a: 'Yes. In a standard cryptic clue the definition sits at one end of the clue, never in the middle. That rule alone cuts down your options a lot.',
+  },
+  {
+    q: 'What is fodder in a cryptic clue?',
+    a: 'Fodder is the raw material the wordplay works on: the letters or words you rearrange, hide, reverse or combine to build the answer.',
+  },
+];
+---
+<Base
+  title="How to Solve Minute Cryptic: A Beginner's Guide to Cryptic Clues"
+  description="A plain-English guide to solving Minute Cryptic. Learn how definitions, indicators and fodder work, and how to spot each type of cryptic clue."
+  schema={{
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+  }}
+>
+  <article class="prose">
+    <header class="page-head">
+      <h1>How to solve Minute Cryptic</h1>
+      <p class="lede">
+        A cryptic clue looks like a strange sentence, but it follows a small set of rules. Once you know them, the daily
+        Minute Cryptic gets a lot easier. This guide covers the basics.
+      </p>
+    </header>
+
+    <h2>Every clue has two halves</h2>
+    <p>
+      Each clue has a <strong>definition</strong> and some <strong>wordplay</strong>. The definition is an ordinary
+      meaning of the answer, and it is always at the very start or the very end of the clue. The wordplay is everything
+      else, and it gives you a second route to the same answer.
+    </p>
+    <p>
+      The number in brackets is the enumeration. (9) means a single nine-letter word. (4, 8) means two words of four and
+      eight letters.
+    </p>
+
+    <h2>The three parts to look for</h2>
+    <ul>
+      <li><strong>Definition:</strong> a word or phrase at one end of the clue that means the answer.</li>
+      <li><strong>Indicator:</strong> a word that tells you what kind of wordplay to use, such as "mixed" for an anagram.</li>
+      <li><strong>Fodder:</strong> the letters or words the indicator acts on.</li>
+    </ul>
+    <p>
+      A good habit is to cover one end of the clue, ask whether the other end could be a definition, then look for an
+      indicator in what's left.
+    </p>
+
+    <h2>The common clue types</h2>
+    <div class="types">
+      {Object.entries(CLUE_TYPES).map(([key, t]) => (
+        <div class="type">
+          <h3>{t.label}</h3>
+          <p>{t.note}</p>
+          {examples[key] && <p class="muted">Indicator words: {examples[key]}</p>}
+        </div>
+      ))}
+    </div>
+
+    <h2>Tips that help</h2>
+    <ul>
+      <li>Read the clue for its surface meaning, then ignore it. The surface is meant to mislead you.</li>
+      <li>Punctuation can usually be ignored. It's there to make the sentence read smoothly.</li>
+      <li>If a clue mentions a number, letter or Roman numeral, it may stand for a single letter or two.</li>
+      <li>Count the letters in the fodder. If it matches the enumeration exactly, an anagram or hidden word is likely.</li>
+      <li>When you think you have it, check the answer against both the definition and the wordplay.</li>
+    </ul>
+
+    <h2>Common questions</h2>
+    {faq.map((i) => (
+      <div class="faq-item">
+        <h3>{i.q}</h3>
+        <p>{i.a}</p>
+      </div>
+    ))}
+
+    <p><a href="/">See today's Minute Cryptic hints and answer →</a></p>
+  </article>
+</Base>

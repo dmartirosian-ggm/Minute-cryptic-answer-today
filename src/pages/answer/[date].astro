@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import PuzzleBody from '../../components/PuzzleBody.astro';
+import RecentList from '../../components/RecentList.astro';
+import Faq from '../../components/Faq.astro';
+import { puzzles, longDate, shortDate, neighbours, latest } from '../../lib/puzzles.js';
+import { faqItems, faqSchema } from '../../lib/faq.js';
+
+export function getStaticPaths() {
+  return puzzles.map((p) => ({ params: { date: p.date }, props: { puzzle: p } }));
+}
+
+const { puzzle: p } = Astro.props;
+const { newer, older } = neighbours(p.date);
+const isToday = p.date === latest.date;
+const faq = faqItems(p, shortDate).slice(0, 2);
+
+const title = `Minute Cryptic Answer for ${shortDate(p.date)} – Hints & Explanation`;
+const description = `The Minute Cryptic answer for ${longDate(p.date)}. Clue: "${p.clue}". Step-by-step hints, the answer, and how the wordplay works.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    datePublished: `${p.date}T05:00:00Z`,
+    dateModified: p.fetchedAt,
+    mainEntityOfPage: new URL(`/answer/${p.date}/`, Astro.site).href,
+    author: { '@type': 'Organization', name: 'Minute Cryptic Answer Today' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: 'Archive', item: new URL('/archive/', Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: shortDate(p.date) },
+    ],
+  },
+  faqSchema(faq),
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <article>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> › <a href="/archive/">Archive</a> › <span>{shortDate(p.date)}</span>
+    </nav>
+    <header class="page-head">
+      <h1>Minute Cryptic Answer for {shortDate(p.date)}</h1>
+      <p class="date-line">{longDate(p.date)}{isToday && ' · today\'s puzzle'}</p>
+    </header>
+
+    <PuzzleBody puzzle={p} />
+
+    <nav class="pager" aria-label="Other days">
+      {older ? <a href={`/answer/${older.date}/`}>← {shortDate(older.date)}</a> : <span />}
+      {newer ? <a href={`/answer/${newer.date}/`}>{shortDate(newer.date)} →</a> : <a href="/">Today's answer →</a>}
+    </nav>
+
+    <RecentList exclude={p.date} limit={5} title="More recent answers" />
+    <Faq items={faq} />
+  </article>
+</Base>

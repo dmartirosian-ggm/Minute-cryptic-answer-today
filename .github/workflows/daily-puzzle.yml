@@ -1,0 +1,44 @@
+name: Fetch daily puzzle
+
+on:
+  schedule:
+    # 00:05 Eastern in winter (EST) and 00:05 Eastern in summer (EDT).
+    # The second run is a harmless no-op when the first already saved the day.
+    - cron: '5 4 * * *'
+    - cron: '5 5 * * *'
+    # Retry later in the morning in case the first runs failed.
+    - cron: '30 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch today's puzzle
+        run: node scripts/fetch-puzzle.mjs
+      - name: Commit if new
+        run: |
+          if [ -n "$(git status --porcelain src/data/puzzles)" ]; then
+            git config user.name "puzzle-bot"
+            git config user.email "puzzle-bot@users.noreply.github.com"
+            git add src/data/puzzles
+            git commit -m "Add puzzle for $(TZ=America/New_York date +%F)"
+            git push
+          else
+            echo "Nothing new."
+          fi
+      # Rebuild the site even when no new data was committed, so a puzzle that
+      # was saved early goes live once its date arrives. Set the
+      # DEPLOY_HOOK_URL secret to your Cloudflare Pages or Netlify build hook.
+      - name: Trigger site rebuild
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$DEPLOY_HOOK_URL" ]; then curl -fsS -X POST "$DEPLOY_HOOK_URL"; else echo "No deploy hook set; relying on push-triggered builds."; fi

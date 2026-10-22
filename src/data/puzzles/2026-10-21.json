@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-21",
+  "clue": "Being in Rome, “X” is ten, certainly",
+  "answer": "EXISTENCE",
+  "enumeration": [
+    9
+  ],
+  "par": 3,
+  "setter": "Asaf Isser",
+  "definition": [
+    "Being"
+  ],
+  "indicators": [
+    "in"
+  ],
+  "fodder": [
+    "Rome, “X” is ten, certainly"
+  ],
+  "clueTypes": [
+    "hidden"
+  ],
+  "video": "https://youtu.be/vb7oBIs8Av0",
+  "solveCount": 96554,
+  "fetchedAt": "2026-10-22T03:36:31.276Z"
+}

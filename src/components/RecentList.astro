@@ -1,0 +1,27 @@
+---
+import { puzzles, shortDate, enumeration } from '../lib/puzzles.js';
+
+interface Props {
+  exclude?: string;
+  limit?: number;
+  title?: string;
+}
+const { exclude, limit = 7, title = 'Recent Minute Cryptic answers' } = Astro.props;
+const items = puzzles.filter((p) => p.date !== exclude).slice(0, limit);
+---
+{items.length > 0 && (
+  <section aria-labelledby="recent-heading">
+    <h2 id="recent-heading">{title}</h2>
+    <ul class="recent">
+      {items.map((p) => (
+        <li>
+          <a href={`/answer/${p.date}/`}>
+            <span class="r-date">{shortDate(p.date)}</span>
+            <span class="r-clue">{p.clue} {enumeration(p)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p><a href="/archive/">See every past answer →</a></p>
+  </section>
+)}

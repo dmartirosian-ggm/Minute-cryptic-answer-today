@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import { puzzles, shortDate, monthKey, enumeration } from '../lib/puzzles.js';
+
+const groups = new Map<string, any[]>();
+for (const p of puzzles) {
+  const k = monthKey(p.date);
+  if (!groups.has(k)) groups.set(k, []);
+  groups.get(k)!.push(p);
+}
+---
+<Base
+  title="Minute Cryptic Answer Archive – Every Past Clue and Answer"
+  description="Every past Minute Cryptic clue with hints and the answer, newest first. Find the answer to any day's puzzle."
+>
+  <header class="page-head">
+    <h1>Minute Cryptic answer archive</h1>
+    <p class="lede">
+      Every Minute Cryptic clue we've covered, newest first. Answers are hidden on each day's page, so you can still
+      try a past puzzle before you look.
+    </p>
+  </header>
+
+  {[...groups].map(([month, items]) => (
+    <section>
+      <h2>{month}</h2>
+      <ul class="recent">
+        {items.map((p) => (
+          <li>
+            <a href={`/answer/${p.date}/`}>
+              <span class="r-date">{shortDate(p.date)}</span>
+              <span class="r-clue">{p.clue} {enumeration(p)}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

@@ -1,0 +1,147 @@
+---
+import {
+  enumeration,
+  lengthPhrase,
+  letterCount,
+  answerWords,
+  quote,
+  typeLabels,
+  CLUE_TYPES,
+  shortDate,
+} from '../lib/puzzles.js';
+
+interface Props {
+  puzzle: any;
+}
+const { puzzle: p } = Astro.props;
+
+const words = answerWords(p);
+const total = letterCount(p);
+const labels = typeLabels(p);
+const firstLetter = p.answer[0];
+const lastLetter = p.answer.replace(/[^A-Z]/g, '').slice(-1);
+const defAtStart = p.definition[0] && p.clue.toLowerCase().startsWith(p.definition[0].toLowerCase());
+const defWhere = p.definition.length ? (defAtStart ? 'at the start of the clue' : 'at the end of the clue') : '';
+
+// For hidden-word clues, mark exactly where the answer sits inside the fodder.
+let hiddenParts: { text: string; hit: boolean }[] | null = null;
+if (p.clueTypes?.includes('hidden') && p.fodder[0]) {
+  const fodder = p.fodder[0];
+  const target = p.answer.replace(/[^A-Z]/g, '');
+  const letters: { ch: string; i: number }[] = [];
+  [...fodder].forEach((ch, i) => /[a-z]/i.test(ch) && letters.push({ ch: ch.toUpperCase(), i }));
+  const joined = letters.map((l) => l.ch).join('');
+  const at = joined.indexOf(target);
+  if (at >= 0) {
+    const start = letters[at].i;
+    const end = letters[at + target.length - 1].i + 1;
+    hiddenParts = [
+      { text: fodder.slice(0, start), hit: false },
+      { text: fodder.slice(start, end), hit: true },
+      { text: fodder.slice(end), hit: false },
+    ];
+  }
+}
+---
+<section class="clue-card" aria-labelledby="clue-heading">
+  <p class="eyebrow" id="clue-heading">Clue for {shortDate(p.date)}</p>
+  <p class="clue">{p.clue} <span class="enum">{enumeration(p)}</span></p>
+  <dl class="facts">
+    <div><dt>Answer length</dt><dd>{total} letters</dd></div>
+    {p.par != null && <div><dt>Par</dt><dd>{p.par} hints</dd></div>}
+    {p.setter && <div><dt>Set by</dt><dd>{p.setter}</dd></div>}
+  </dl>
+  <a class="play" href="https://www.minutecryptic.com/" rel="nofollow noopener" target="_blank">Play this puzzle at minutecryptic.com →</a>
+</section>
+
+<section aria-labelledby="hints-heading">
+  <h2 id="hints-heading">Hints, from gentle to giveaway</h2>
+  <p class="muted">Each hint stays hidden until you tap it, so you can take only as much help as you need.</p>
+
+  <div class="hints">
+    {labels.length > 0 && (
+      <details class="hint">
+        <summary><span class="n">1</span> What kind of clue is it?</summary>
+        <div class="hint-body">
+          <p>This is a <strong>{labels.join(' + ').toLowerCase()}</strong> clue.</p>
+          {p.clueTypes.map((t: string) => CLUE_TYPES[t] && <p>{CLUE_TYPES[t].note}</p>)}
+        </div>
+      </details>
+    )}
+
+    {p.definition.length > 0 && (
+      <details class="hint">
+        <summary><span class="n">2</span> Where is the definition?</summary>
+        <div class="hint-body">
+          <p>The definition is {quote(p.definition)}, {defWhere}. The answer means the same thing as this word or phrase.</p>
+        </div>
+      </details>
+    )}
+
+    {p.indicators.length > 0 && (
+      <details class="hint">
+        <summary><span class="n">3</span> Which word is the indicator?</summary>
+        <div class="hint-body">
+          <p>
+            The {p.indicators.length > 1 ? 'indicators are' : 'indicator is'} {quote(p.indicators)}.
+            {p.indicators.length > 1 ? ' They tell' : ' It tells'} you what to do with the rest of the clue.
+          </p>
+        </div>
+      </details>
+    )}
+
+    {p.fodder.length > 0 && (
+      <details class="hint">
+        <summary><span class="n">4</span> What is the fodder?</summary>
+        <div class="hint-body">
+          <p>The letters you work with come from {quote(p.fodder)}.</p>
+        </div>
+      </details>
+    )}
+
+    <details class="hint">
+      <summary><span class="n">5</span> First and last letter</summary>
+      <div class="hint-body">
+        <p>The answer is {lengthPhrase(p)}. It starts with <strong>{firstLetter}</strong> and ends with <strong>{lastLetter}</strong>.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section aria-labelledby="answer-heading">
+  <h2 id="answer-heading">Minute Cryptic answer for {shortDate(p.date)}</h2>
+  <details class="answer">
+    <summary>Tap to reveal the answer</summary>
+    <div class="answer-body">
+      <div class="tiles" aria-label={`The answer is ${p.answer}`}>
+        {words.map((w) => (
+          <span class="word">{[...w].map((ch) => <span class="tile">{ch}</span>)}</span>
+        ))}
+      </div>
+      <p>The answer to today's Minute Cryptic is <strong>{p.answer}</strong>.</p>
+
+      <h3>How the clue works</h3>
+      {p.definition.length > 0 && <p>The definition is {quote(p.definition)}, and {p.answer} is another way of saying it.</p>}
+      {p.indicators.length > 0 && labels.length > 0 && (
+        <p>
+          {quote(p.indicators)} {p.indicators.length > 1 ? 'are the indicators' : 'is the indicator'}, pointing to a {labels.join(' + ').toLowerCase()} clue.
+        </p>
+      )}
+      {hiddenParts ? (
+        <p>
+          The answer is hidden in the fodder:{' '}
+          <span class="fodder">
+            {hiddenParts.map((part) => (part.hit ? <mark>{part.text}</mark> : part.text))}
+          </span>
+        </p>
+      ) : (
+        p.fodder.length > 0 && <p>Applying that wordplay to {quote(p.fodder)} gives {p.answer}.</p>
+      )}
+      {p.video && (
+        <p>
+          For a full walkthrough, Minute Cryptic posted an <a href={p.video} rel="nofollow noopener" target="_blank">explainer video for this clue on YouTube</a>.
+        </p>
+      )}
+    </div>
+  </details>
+</section>

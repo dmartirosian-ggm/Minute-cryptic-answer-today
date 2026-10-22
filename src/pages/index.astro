@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import PuzzleBody from '../components/PuzzleBody.astro';
+import RecentList from '../components/RecentList.astro';
+import Faq from '../components/Faq.astro';
+import { latest, longDate, shortDate, neighbours } from '../lib/puzzles.js';
+import { faqItems, faqSchema } from '../lib/faq.js';
+
+const p = latest;
+const { older } = neighbours(p.date);
+const faq = faqItems(p, shortDate);
+
+const title = `Minute Cryptic Answer Today (${shortDate(p.date)}) – Hints & Explanation`;
+const description = `Today's Minute Cryptic answer for ${longDate(p.date)}, with step-by-step hints and a plain-English explanation of how the clue works. Updated every day just after midnight.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Minute Cryptic Answer Today',
+    url: Astro.site?.href,
+  },
+  faqSchema(faq),
+];
+---
+<Base title={title} description={description} canonicalPath="/" schema={schema}>
+  <article>
+    <header class="page-head">
+      <h1>Minute Cryptic Answer Today</h1>
+      <p class="date-line">{longDate(p.date)}</p>
+      <p class="lede">
+        Stuck on today's Minute Cryptic? Below you'll find today's clue, five hints that start gentle and get more direct,
+        and the full answer with an explanation. Nothing is revealed until you tap it.
+      </p>
+    </header>
+
+    <PuzzleBody puzzle={p} />
+
+    {older && (
+      <section class="yesterday">
+        <h2>Yesterday's Minute Cryptic answer</h2>
+        <p>
+          The clue for {shortDate(older.date)} was <em>{older.clue}</em>.
+          <a href={`/answer/${older.date}/`}>See yesterday's hints and answer →</a>
+        </p>
+      </section>
+    )}
+
+    <RecentList exclude={p.date} />
+    <Faq items={faq} />
+  </article>
+</Base>
