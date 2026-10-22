@@ -13,7 +13,10 @@ export function todayEastern() {
 }
 
 // Never publish a puzzle before its day has started in the US.
-const cutoff = todayEastern();
+// Some build runtimes freeze the clock at 1970 outside a request; if the clock
+// looks wrong, skip the date check rather than hiding every puzzle.
+const now = todayEastern();
+const cutoff = now >= '2026-01-01' ? now : '9999-12-31';
 
 export const puzzles = Object.values(modules)
   .map((m) => m.default ?? m)

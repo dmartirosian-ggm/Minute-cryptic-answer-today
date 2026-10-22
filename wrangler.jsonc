@@ -1,0 +1,10 @@
+{
+  // Deploy as a plain static site (no Worker code, no Astro adapter).
+  "name": "minute-cryptic-answer-today",
+  "compatibility_date": "2026-10-01",
+  "build": { "command": "npm run build" },
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
