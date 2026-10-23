@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "clue": "Butterflies, beginning to break free from many cocoons, exit after metamorphosis",
+  "answer": "ANXIETY",
+  "enumeration": [
+    7
+  ],
+  "par": 3,
+  "setter": "Supware",
+  "definition": [
+    "Butterflies"
+  ],
+  "indicators": [
+    "beginning",
+    "to break free from",
+    "cocoons,",
+    "after metamorphosis"
+  ],
+  "fodder": [
+    "many",
+    "exit"
+  ],
+  "clueTypes": [
+    "anagram",
+    "container",
+    "deletion",
+    "selection"
+  ],
+  "video": "https://youtu.be/FRmF9N-Wdqo",
+  "solveCount": 32908,
+  "fetchedAt": "2026-10-23T09:16:52.943Z"
+}
