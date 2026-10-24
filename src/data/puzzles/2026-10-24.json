@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "clue": "Larry's switching sides in ongoing court battle?",
+  "answer": "RALLY",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Members: Rusty Lee & D.B. Cooper",
+  "definition": [
+    "ongoing court battle?"
+  ],
+  "indicators": [
+    "switching sides"
+  ],
+  "fodder": [
+    "Larry"
+  ],
+  "clueTypes": [],
+  "video": "https://youtu.be/SvM-fviUXhI",
+  "solveCount": 32747,
+  "fetchedAt": "2026-10-24T08:49:09.313Z"
+}
