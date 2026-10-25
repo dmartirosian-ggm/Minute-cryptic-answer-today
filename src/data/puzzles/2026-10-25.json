@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "clue": "Loop-de-loops wound round-and-round",
+  "answer": "SPOOLED",
+  "enumeration": [
+    7
+  ],
+  "par": 3,
+  "setter": "Nate Yungman & LCameron",
+  "definition": [
+    "wound round-and-round"
+  ],
+  "indicators": [
+    "Loop"
+  ],
+  "fodder": [
+    "de-loops"
+  ],
+  "clueTypes": [
+    "reversal"
+  ],
+  "video": "https://youtu.be/Oout7e6MIEk",
+  "solveCount": 34524,
+  "fetchedAt": "2026-10-25T09:05:29.328Z"
+}
