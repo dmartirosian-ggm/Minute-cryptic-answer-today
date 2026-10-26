@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-26",
+  "clue": "Pop duos leading song and dance",
+  "answer": "SODA",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "Jack Snipe",
+  "definition": [
+    "Pop"
+  ],
+  "indicators": [
+    "duos leading"
+  ],
+  "fodder": [
+    "song",
+    "dance"
+  ],
+  "clueTypes": [
+    "selection"
+  ],
+  "video": "https://youtu.be/iApqe-PwCU0",
+  "solveCount": 42409,
+  "fetchedAt": "2026-10-26T10:01:28.415Z"
+}
