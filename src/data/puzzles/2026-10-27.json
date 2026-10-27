@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-27",
+  "clue": "New friends are keepers, as they say",
+  "answer": "FINDERS",
+  "enumeration": [
+    7
+  ],
+  "par": 3,
+  "setter": "Jack Porter",
+  "definition": [
+    "keepers, as they say"
+  ],
+  "indicators": [
+    "New"
+  ],
+  "fodder": [
+    "friends"
+  ],
+  "clueTypes": [
+    "anagram"
+  ],
+  "video": "https://youtu.be/_in9fVLe2tA",
+  "solveCount": 36492,
+  "fetchedAt": "2026-10-27T09:45:08.515Z"
+}
