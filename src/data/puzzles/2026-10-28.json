@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-28",
+  "clue": "Easy modes for Scrabble, Bananagrams, Chess, Pictionary and cryptics?",
+  "answer": "BASIC",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "Easy"
+  ],
+  "indicators": [
+    "modes for"
+  ],
+  "fodder": [
+    "Scrabble, Bananagrams, Chess, Pictionary and cryptics"
+  ],
+  "clueTypes": [
+    "selection"
+  ],
+  "video": "https://youtu.be/qcPfbZO_4fw",
+  "solveCount": 40271,
+  "fetchedAt": "2026-10-28T10:30:19.934Z"
+}
