@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-29",
+  "clue": "Pretty far-fetched information",
+  "answer": "FAIR",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "D.B. Cooper",
+  "definition": [
+    "Pretty"
+  ],
+  "indicators": [
+    "fetched"
+  ],
+  "fodder": [
+    "far",
+    "information"
+  ],
+  "clueTypes": [
+    "container"
+  ],
+  "video": "https://youtu.be/ZLOU7t3Zb0I",
+  "solveCount": 41974,
+  "fetchedAt": "2026-10-29T10:50:45.773Z"
+}
