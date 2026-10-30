@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-30",
+  "clue": "Fix broadcast after replay is delayed?",
+  "answer": "REPAIR",
+  "enumeration": [
+    6
+  ],
+  "par": 2,
+  "setter": "TrippyLG",
+  "definition": [
+    "Fix"
+  ],
+  "indicators": [
+    "after",
+    "is delayed?"
+  ],
+  "fodder": [
+    "broadcast",
+    "replay"
+  ],
+  "clueTypes": [
+    "deletion"
+  ],
+  "video": "https://youtu.be/Tjvq7zPoOIg",
+  "solveCount": 37613,
+  "fetchedAt": "2026-10-30T10:48:29.387Z"
+}
