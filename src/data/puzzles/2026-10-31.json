@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "clue": "Old snob rattled and shook tin for a bank deposit?",
+  "answer": "BLOOD",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "D.B. Cooper with Liam",
+  "definition": [
+    "a bank deposit?"
+  ],
+  "indicators": [
+    "rattled",
+    "shook"
+  ],
+  "fodder": [
+    "Old snob",
+    "tin"
+  ],
+  "clueTypes": [
+    "anagram",
+    "deletion"
+  ],
+  "video": "https://youtu.be/tz-Wqt3r020",
+  "solveCount": 33915,
+  "fetchedAt": "2026-10-31T10:19:06.492Z"
+}
