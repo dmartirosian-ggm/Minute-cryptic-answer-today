@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-01",
+  "clue": "Doomscrolling has become a state of mind",
+  "answer": "MOOD",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "D.B. Cooper",
+  "definition": [
+    "a state of mind"
+  ],
+  "indicators": [
+    "scrolling"
+  ],
+  "fodder": [
+    "Doom"
+  ],
+  "clueTypes": [
+    "reversal"
+  ],
+  "video": "https://youtu.be/KyLNNIr28tw",
+  "solveCount": 42281,
+  "fetchedAt": "2026-11-01T11:12:29.834Z"
+}
