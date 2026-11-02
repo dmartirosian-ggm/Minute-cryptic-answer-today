@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-02",
+  "clue": "The spun-around unlimited sign!",
+  "answer": "EIGHT",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "WREG",
+  "definition": [
+    "The spun-around unlimited sign!"
+  ],
+  "indicators": [
+    "spun",
+    "around",
+    "unlimited"
+  ],
+  "fodder": [
+    "The",
+    "sign"
+  ],
+  "clueTypes": [
+    "container",
+    "reversal",
+    "deletion"
+  ],
+  "video": "https://youtu.be/WPsvonSl1MY",
+  "solveCount": 45510,
+  "fetchedAt": "2026-11-02T12:15:46.809Z"
+}
