@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-03",
+  "clue": "Single title track from album: a demo I sell exclusively",
+  "answer": "MADEMOISELLE",
+  "enumeration": [
+    12
+  ],
+  "par": 4,
+  "setter": "Ben Stuart",
+  "definition": [
+    "Single title"
+  ],
+  "indicators": [
+    "track from"
+  ],
+  "fodder": [
+    "album: a demo I sell exclusively"
+  ],
+  "clueTypes": [
+    "hidden"
+  ],
+  "video": "https://youtu.be/S0iMuRphi7E",
+  "solveCount": 42574,
+  "fetchedAt": "2026-11-03T11:50:46.290Z"
+}
