@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-05",
+  "clue": "Polar bears turned up in fashion, very cool (and hot!)",
+  "answer": "POPULAR",
+  "enumeration": [
+    7
+  ],
+  "par": 3,
+  "setter": "Tim Randalls with Liam & Angas",
+  "definition": [
+    "in fashion, very cool (and hot!)"
+  ],
+  "indicators": [
+    "bears",
+    "turned"
+  ],
+  "fodder": [
+    "Polar",
+    "up"
+  ],
+  "clueTypes": [
+    "container",
+    "reversal"
+  ],
+  "video": "https://youtu.be/vFxX7Za7hlM",
+  "solveCount": 40409,
+  "fetchedAt": "2026-11-05T12:11:25.646Z"
+}
