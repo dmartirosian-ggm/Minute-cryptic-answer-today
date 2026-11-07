@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-07",
+  "clue": "Checked identification after dragging latecomers off plane",
+  "answer": "PLAID",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "Checked"
+  ],
+  "indicators": [
+    "after",
+    "dragging latecomers off"
+  ],
+  "fodder": [
+    "identification",
+    "plane"
+  ],
+  "clueTypes": [
+    "deletion"
+  ],
+  "video": "https://youtu.be/gBbZIwJhbpI",
+  "solveCount": 39350,
+  "fetchedAt": "2026-11-07T10:58:54.826Z"
+}
