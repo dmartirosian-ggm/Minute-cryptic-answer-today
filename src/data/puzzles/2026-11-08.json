@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-08",
+  "clue": "Beat dry heat!",
+  "answer": "HYDRATE",
+  "enumeration": [
+    7
+  ],
+  "par": 3,
+  "setter": "Bluejay",
+  "definition": [
+    "Beat dry heat!"
+  ],
+  "indicators": [
+    "Beat"
+  ],
+  "fodder": [
+    "dry heat!"
+  ],
+  "clueTypes": [
+    "anagram"
+  ],
+  "video": "https://youtu.be/kZFVWBanaU4",
+  "solveCount": 42231,
+  "fetchedAt": "2026-11-08T11:12:58.787Z"
+}
