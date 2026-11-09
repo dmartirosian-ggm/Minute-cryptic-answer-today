@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-09",
+  "clue": "Whistle-blower exposed greed surrounding destruction of reef",
+  "answer": "REFEREE",
+  "enumeration": [
+    7
+  ],
+  "par": 3,
+  "setter": "Jamie L",
+  "definition": [
+    "Whistle-blower"
+  ],
+  "indicators": [
+    "exposed",
+    "surrounding",
+    "destruction of"
+  ],
+  "fodder": [
+    "greed",
+    "reef"
+  ],
+  "clueTypes": [
+    "anagram",
+    "container",
+    "deletion"
+  ],
+  "video": "https://youtu.be/Mv3eFfu3huY",
+  "solveCount": 50430,
+  "fetchedAt": "2026-11-09T12:44:41.070Z"
+}
