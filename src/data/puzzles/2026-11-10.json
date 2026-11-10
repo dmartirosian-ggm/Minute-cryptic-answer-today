@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-10",
+  "clue": "Shakespeare's your thing, not golf, sweetheart",
+  "answer": "THINE",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "Shakespeare's your"
+  ],
+  "indicators": [
+    "not",
+    "heart"
+  ],
+  "fodder": [
+    "thing",
+    "golf",
+    "sweet"
+  ],
+  "clueTypes": [
+    "deletion",
+    "selection"
+  ],
+  "video": "https://youtu.be/VuzRobwlsqg",
+  "solveCount": 45453,
+  "fetchedAt": "2026-11-10T12:29:27.907Z"
+}
