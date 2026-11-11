@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-11",
+  "clue": "Prime locations in marketable neighbourhood",
+  "answer": "AREA",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "Dunc",
+  "definition": [
+    "neighbourhood"
+  ],
+  "indicators": [
+    "Prime locations in"
+  ],
+  "fodder": [
+    "marketable"
+  ],
+  "clueTypes": [
+    "selection"
+  ],
+  "video": "https://youtu.be/duTF9mM6tj0",
+  "solveCount": 46038,
+  "fetchedAt": "2026-11-11T11:48:18.820Z"
+}
