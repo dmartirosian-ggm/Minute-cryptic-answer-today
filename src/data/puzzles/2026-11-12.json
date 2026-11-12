@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "clue": "Hi and bye when Italian-American spies pizza",
+  "answer": "CIAO",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "Dunc with Liam",
+  "definition": [
+    "Hi and bye when Italian"
+  ],
+  "indicators": [],
+  "fodder": [
+    "American spies",
+    "pizza"
+  ],
+  "clueTypes": [],
+  "video": "https://youtu.be/mKt5Wuqdsd0",
+  "solveCount": 50887,
+  "fetchedAt": "2026-11-12T12:32:37.179Z"
+}
