@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-13",
+  "clue": "Liver virus damaged 5-40% of organ?",
+  "answer": "SURVIVOR",
+  "enumeration": [
+    8
+  ],
+  "par": 3,
+  "setter": "Rae D",
+  "definition": [
+    "Liver"
+  ],
+  "indicators": [
+    "damaged",
+    "40% of"
+  ],
+  "fodder": [
+    "virus",
+    "5",
+    "organ"
+  ],
+  "clueTypes": [
+    "anagram",
+    "selection"
+  ],
+  "video": "https://youtu.be/aex1UyPiMRQ",
+  "solveCount": 41036,
+  "fetchedAt": "2026-11-13T12:04:44.986Z"
+}
