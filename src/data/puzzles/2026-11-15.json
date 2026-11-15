@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-15",
+  "clue": "Red Sox lost 11-1, reeling after debut of rookie Yankee",
+  "answer": "ROSY",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "Tanner Burton",
+  "definition": [
+    "Red"
+  ],
+  "indicators": [
+    "lost",
+    "reeling",
+    "after",
+    "debut of"
+  ],
+  "fodder": [
+    "Sox",
+    "11-1,",
+    "rookie",
+    "Yankee"
+  ],
+  "clueTypes": [
+    "reversal",
+    "deletion",
+    "selection"
+  ],
+  "video": "https://youtu.be/9S1lbG38pwg",
+  "solveCount": 40734,
+  "fetchedAt": "2026-11-15T11:53:12.614Z"
+}
