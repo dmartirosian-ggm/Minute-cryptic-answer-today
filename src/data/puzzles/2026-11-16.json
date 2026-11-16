@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-16",
+  "clue": "Strive to be one in a million",
+  "answer": "AIM",
+  "enumeration": [
+    3
+  ],
+  "par": 2,
+  "setter": "Hatless27",
+  "definition": [
+    "Strive"
+  ],
+  "indicators": [
+    "in"
+  ],
+  "fodder": [
+    "one",
+    "a",
+    "million"
+  ],
+  "clueTypes": [
+    "container"
+  ],
+  "video": "https://youtu.be/pi-KQjJsaao",
+  "solveCount": 48753,
+  "fetchedAt": "2026-11-16T12:38:08.848Z"
+}
