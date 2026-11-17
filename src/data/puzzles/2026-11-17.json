@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-17",
+  "clue": "Climate change metaphors: planets without plants",
+  "answer": "ATMOSPHERE",
+  "enumeration": [
+    10
+  ],
+  "par": 3,
+  "setter": "blurbthe",
+  "definition": [
+    "Climate"
+  ],
+  "indicators": [
+    "change",
+    "without"
+  ],
+  "fodder": [
+    "metaphors:",
+    "planets",
+    "plants"
+  ],
+  "clueTypes": [
+    "anagram",
+    "deletion"
+  ],
+  "video": "https://youtu.be/L5mipJzXD64",
+  "solveCount": 52530,
+  "fetchedAt": "2026-11-17T13:08:51.339Z"
+}
