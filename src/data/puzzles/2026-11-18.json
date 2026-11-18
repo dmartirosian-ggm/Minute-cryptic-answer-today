@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-18",
+  "clue": "Bin Laden with extreme dislike for US president",
+  "answer": "BIDEN",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Members: James & Ollie",
+  "definition": [
+    "US president"
+  ],
+  "indicators": [
+    "Laden with",
+    "extreme"
+  ],
+  "fodder": [
+    "Bin",
+    "dislike"
+  ],
+  "clueTypes": [
+    "container",
+    "selection"
+  ],
+  "video": "https://youtu.be/Sx2d3OdrMXs",
+  "solveCount": 50319,
+  "fetchedAt": "2026-11-18T12:57:01.272Z"
+}
