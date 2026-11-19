@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-19",
+  "clue": "500 geese in formation seen abandoning river with less water",
+  "answer": "DRIER",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "with less water"
+  ],
+  "indicators": [
+    "seen",
+    "abandoning"
+  ],
+  "fodder": [
+    "500",
+    "geese in formation",
+    "river"
+  ],
+  "clueTypes": [
+    "deletion"
+  ],
+  "video": "https://youtu.be/MpyvC69dqJw",
+  "solveCount": 47395,
+  "fetchedAt": "2026-11-19T12:51:36.299Z"
+}
