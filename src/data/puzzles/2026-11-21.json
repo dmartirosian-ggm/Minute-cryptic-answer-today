@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-21",
+  "clue": "Grasped head of fork - a novel method",
+  "answer": "FATHOMED",
+  "enumeration": [
+    8
+  ],
+  "par": 3,
+  "setter": "Sean Rich",
+  "definition": [
+    "Grasped"
+  ],
+  "indicators": [
+    "head of",
+    "novel"
+  ],
+  "fodder": [
+    "fork",
+    "a",
+    "method"
+  ],
+  "clueTypes": [
+    "anagram",
+    "selection"
+  ],
+  "video": "https://youtu.be/r0nkLr2_wzo",
+  "solveCount": 40162,
+  "fetchedAt": "2026-11-21T12:29:46.668Z"
+}
