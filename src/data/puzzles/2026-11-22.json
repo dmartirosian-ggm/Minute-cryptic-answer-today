@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-22",
+  "clue": "Bird in Athens becomes the French tourist's companion?",
+  "answer": "ATLAS",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "tourist's companion"
+  ],
+  "indicators": [
+    "Bird in",
+    "becomes",
+    "French"
+  ],
+  "fodder": [
+    "Athens",
+    "the"
+  ],
+  "clueTypes": [
+    "selection"
+  ],
+  "video": "https://youtu.be/jN5oANR4I2w",
+  "solveCount": 39115,
+  "fetchedAt": "2026-11-22T12:28:54.625Z"
+}
