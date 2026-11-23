@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-23",
+  "clue": "Kitchen cleaners yelled \"You left sugar on the counter!\"",
+  "answer": "RAGS",
+  "enumeration": [
+    4
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "Kitchen cleaners"
+  ],
+  "indicators": [
+    "yelled",
+    "left",
+    "on the counter"
+  ],
+  "fodder": [
+    "\"You",
+    "sugar"
+  ],
+  "clueTypes": [
+    "homophone",
+    "reversal",
+    "deletion"
+  ],
+  "video": "https://youtu.be/iUkFa40N_Vo",
+  "solveCount": 54991,
+  "fetchedAt": "2026-11-23T14:26:37.032Z"
+}
