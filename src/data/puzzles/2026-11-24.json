@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-24",
+  "clue": "Split bill for chicken overwhelms waiter at last",
+  "answer": "BREAK",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "Split"
+  ],
+  "indicators": [
+    "overwhelms",
+    "at last"
+  ],
+  "fodder": [
+    "bill for chicken",
+    "waiter"
+  ],
+  "clueTypes": [
+    "container",
+    "selection"
+  ],
+  "video": "https://youtu.be/vSY2o_9stuA",
+  "solveCount": 52069,
+  "fetchedAt": "2026-11-24T14:44:55.276Z"
+}
