@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-25",
+  "clue": "Well... it must establish, to some extent, proof of basic character",
+  "answer": "LITMUS TEST",
+  "enumeration": [
+    6,
+    4
+  ],
+  "par": 3,
+  "setter": "Rusty Lee",
+  "definition": [
+    "proof of basic character"
+  ],
+  "indicators": [
+    "to some extent,"
+  ],
+  "fodder": [
+    "Well... it must establish,"
+  ],
+  "clueTypes": [
+    "hidden"
+  ],
+  "video": "https://youtu.be/CqBDRqe_fWg",
+  "solveCount": 47228,
+  "fetchedAt": "2026-11-25T14:10:27.882Z"
+}
