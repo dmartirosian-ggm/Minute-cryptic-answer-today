@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-26",
+  "clue": "Unfortunately, I can’t use this. Interested?",
+  "answer": "ENTHUSIASTIC",
+  "enumeration": [
+    12
+  ],
+  "par": 4,
+  "setter": "Mandash and Cory",
+  "definition": [
+    "Interested"
+  ],
+  "indicators": [
+    "Unfortunately"
+  ],
+  "fodder": [
+    "I can’t use this"
+  ],
+  "clueTypes": [
+    "anagram"
+  ],
+  "video": "https://youtu.be/eboDKpOtlfI",
+  "solveCount": 46423,
+  "fetchedAt": "2026-11-26T13:46:45.569Z"
+}
