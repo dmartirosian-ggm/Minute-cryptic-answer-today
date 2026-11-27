@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-27",
+  "clue": "Long-expired Greek dish finally swapped for another dish?",
+  "answer": "PLATO",
+  "enumeration": [
+    5
+  ],
+  "par": 2,
+  "setter": "Liam Runnalls",
+  "definition": [
+    "Long-expired Greek"
+  ],
+  "indicators": [
+    "finally",
+    "swapped for"
+  ],
+  "fodder": [
+    "dish",
+    "another dish?"
+  ],
+  "clueTypes": [
+    "selection"
+  ],
+  "video": "https://youtu.be/8fZNGQ6r2Ik",
+  "solveCount": 42724,
+  "fetchedAt": "2026-11-27T13:43:56.761Z"
+}
