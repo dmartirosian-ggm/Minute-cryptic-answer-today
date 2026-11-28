@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-28",
+  "clue": "Untenable, outnumbered, powerless",
+  "answer": "UNABLE",
+  "enumeration": [
+    6
+  ],
+  "par": 2,
+  "setter": "Paul LePore",
+  "definition": [
+    "powerless"
+  ],
+  "indicators": [
+    "outnumbered,"
+  ],
+  "fodder": [
+    "Untenable,"
+  ],
+  "clueTypes": [
+    "deletion"
+  ],
+  "video": "https://youtu.be/9pvsApZMWog",
+  "solveCount": 45547,
+  "fetchedAt": "2026-11-28T12:53:02.260Z"
+}
